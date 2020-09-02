@@ -1,7 +1,8 @@
 version: '3'
 services:
     web:
-        stdin_open: true
+        stdin_open: true    #docker run -i
+ #       tty: true   #docker run -t
         build:
             context: .
             dockerfile: Dockerfile.dev
@@ -12,6 +13,8 @@ services:
             - .:/app
 
     tests:
+#        stdin_open: true    #docker run -i
+#        tty: true   #docker run -t
         build:
             context: .
             dockerfile: Dockerfile.dev
@@ -20,4 +23,3 @@ services:
             - .:/app
         command: ["npm", "run", "test"]
 
-        
