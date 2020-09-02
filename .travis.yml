@@ -12,14 +12,14 @@ before_install:
 script:
     - docker run -e CI=true simonfcmcom/docker-react npm run test
 
-deploy:
-    provider: elasticbeanstalk
-    region:
-    app: "docker-react"
-    env:
-    bucket_name:
-    bucket_path: "docker-react"
-    on: 
-        branch: master
+#deploy:
+ #   provider: elasticbeanstalk
+ #   region:
+ #   app: "docker-react"
+ #   env:
+ #   bucket_name:
+ #   bucket_path: "docker-react"
+ #   on: 
+ #       branch: master
 
 

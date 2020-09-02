@@ -13,7 +13,7 @@ services:
             - .:/app
 
     tests:
-        stdin_open: true    #docker run -i
+#        stdin_open: true    #docker run -i
 #        tty: true   #docker run -t
         build:
             context: .
